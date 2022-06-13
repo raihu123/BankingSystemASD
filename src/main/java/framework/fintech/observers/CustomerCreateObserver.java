@@ -1,7 +1,7 @@
 package framework.fintech.observers;
 
-import framework.core.Notification.Email.EmailMessage;
-import framework.core.Notification.Email.EmailNotification;
+import framework.core.notification.Email.EmailMessage;
+import framework.core.notification.Email.EmailNotification;
 import framework.core.Observer.Observer;
 import framework.fintech.models.Customer;
 

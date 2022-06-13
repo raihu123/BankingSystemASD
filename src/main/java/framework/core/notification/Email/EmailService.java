@@ -1,4 +1,4 @@
-package framework.core.Notification.Email;
+package framework.core.notification.Email;
 
 //import framework.core.configuration.EmailConfiguration;
 

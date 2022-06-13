@@ -1,7 +1,7 @@
 package banking.strategy;
 
-import framework.core.Notification.Email.EmailMessage;
-import framework.core.Notification.Email.EmailNotification;
+import framework.core.notification.Email.EmailMessage;
+import framework.core.notification.Email.EmailNotification;
 import framework.fintech.models.Account;
 import framework.fintech.strategy.BalanceAlertStrategy;
 

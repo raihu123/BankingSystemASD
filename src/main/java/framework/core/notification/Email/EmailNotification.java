@@ -1,6 +1,6 @@
-package framework.core.Notification.Email;
+package framework.core.notification.Email;
 
-import framework.core.Notification.Notification;
+import framework.core.notification.Notification;
 
 public class EmailNotification implements Notification {
     private final EmailMessage message;

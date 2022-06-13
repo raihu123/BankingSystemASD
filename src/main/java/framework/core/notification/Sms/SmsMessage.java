@@ -1,4 +1,4 @@
-package framework.core.Notification.Sms;
+package framework.core.notification.Sms;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

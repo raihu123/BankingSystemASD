@@ -1,6 +1,6 @@
-package framework.core.Notification.Sms;
+package framework.core.notification.Sms;
 
-import framework.core.Notification.Notification;
+import framework.core.notification.Notification;
 
 public class SmsNotification implements Notification {
     private final SmsMessage message;
