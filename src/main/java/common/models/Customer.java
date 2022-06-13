@@ -22,25 +22,6 @@ public abstract  class Customer implements Storable<String> {
     private CustomerType customerType;
     private BalanceAlertStrategy balanceAlertStrategy;
     private TransactionStrategy transactionStrategy;
-    
-    
-//
-//    public Customer(String id, String name, String email, String street, String city, String state, String zip,
-//			CustomerType customerType, BalanceAlertStrategy balanceAlertStrategy,
-//			TransactionStrategy transactionStrategy) {
-//		super();
-//		this.id = id;
-//		this.name = name;
-//		this.email = email;
-//		this.street = street;
-//		this.city = city;
-//		this.state = state;
-//		this.zip = zip;
-//		this.customerType = customerType;
-//		this.balanceAlertStrategy = balanceAlertStrategy;
-//		this.transactionStrategy = transactionStrategy;
-//	}
-
 
 
 	public String getId() {

@@ -8,12 +8,7 @@ import lombok.Data;
 public class SmsMessage {
     private String to;
     private String body;
-    
-//	public SmsMessage(String to, String body) {
-//		super();
-//		this.to = to;
-//		this.body = body;
-//	}
+
 	
 	public String getTo() {
 		return to;
