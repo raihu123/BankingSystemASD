@@ -1,10 +1,10 @@
 package ccard.models;
 
 import ccard.strategy.NoCCMinPaymentStrategy;
-import common.enums.AccountType;
-import common.models.Account;
-import common.models.Customer;
-import common.strategy.InterestStrategy;
+import framework.fintech.enums.AccountType;
+import framework.fintech.models.Account;
+import framework.fintech.models.Customer;
+import framework.fintech.strategy.InterestStrategy;
 
 public abstract class CreditCard extends Account {
 

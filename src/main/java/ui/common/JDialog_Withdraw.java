@@ -3,13 +3,11 @@ package ui.common;
 
 import ui.bank.MainFrame;
 
-import javax.swing.*;
-
 public class JDialog_Withdraw extends javax.swing.JDialog
 {
    
-    private MainFrame parentFrame;
-    private String accnr;
+    private final MainFrame parentFrame;
+    private final String accnr;
 
 	public JDialog_Withdraw(MainFrame parent, String aaccnr)
 	{

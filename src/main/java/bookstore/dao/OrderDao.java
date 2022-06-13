@@ -1,9 +1,9 @@
 package bookstore.dao;
 
 import bookstore.models.Order;
-import framework.DAO;
-import framework.Storage.MemoryStorage;
-import framework.Storage.Storage;
+import framework.core.DAO;
+import framework.core.Storage.*;
+import framework.core.Storage.Storage;
 
 public class OrderDao extends DAO<Order, String> {
     @Override

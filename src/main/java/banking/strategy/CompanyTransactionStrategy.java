@@ -1,9 +1,9 @@
 package banking.strategy;
 
-import common.models.AccountEntry;
-import common.strategy.TransactionStrategy;
-import framework.Components.Notification.Email.EmailMessage;
-import framework.Components.Notification.Email.EmailNotification;
+import framework.core.Notification.Email.EmailMessage;
+import framework.core.Notification.Email.EmailNotification;
+import framework.fintech.models.AccountEntry;
+import framework.fintech.strategy.TransactionStrategy;
 
 public class CompanyTransactionStrategy implements TransactionStrategy {
     @Override

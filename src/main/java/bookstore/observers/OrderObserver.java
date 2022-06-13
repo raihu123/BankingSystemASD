@@ -1,7 +1,7 @@
 package bookstore.observers;
 
 import bookstore.models.Order;
-import framework.Observer.Observer;
+import framework.core.Observer.Observer;
 
 public class OrderObserver implements Observer<Order> {
     @Override

@@ -3,10 +3,11 @@ package ui.ccard;
 import ui.bank.AccountDialog;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class JDialog_AddCCAccount extends AccountDialog {
-    private CardFrm cardFrame;
+    private final CardFrm cardFrame;
 
     JRadioButton JRadioButton_Gold;
     JRadioButton JRadioButton_Silver;

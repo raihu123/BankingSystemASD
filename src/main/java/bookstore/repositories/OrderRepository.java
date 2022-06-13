@@ -2,8 +2,8 @@ package bookstore.repositories;
 
 import bookstore.dao.OrderDao;
 import bookstore.models.Order;
-import framework.DAO;
-import framework.EntityRepository;
+import framework.core.DAO;
+import framework.core.EntityRepository;
 
 public class OrderRepository extends EntityRepository<Order,String> {
     @Override

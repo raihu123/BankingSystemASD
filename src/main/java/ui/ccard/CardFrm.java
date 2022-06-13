@@ -1,11 +1,16 @@
 package ui.ccard;
 
 import ccard.controllers.CreditAccountController;
-import common.models.Account;
-import lombok.*;
-import ui.bank.*;
+import framework.fintech.models.Account;
+import lombok.Getter;
+import lombok.Setter;
+import ui.bank.AccountButton;
+import ui.bank.CardBtnActions;
+import ui.bank.MainFrame;
+
 import javax.swing.*;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Collection;
 
 @Getter
 @Setter
@@ -22,7 +27,7 @@ public class CardFrm extends MainFrame {
         overview("Credit-card processing Application.", getTableColumnNames(), getButtons());
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             try {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
