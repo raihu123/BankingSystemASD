@@ -93,7 +93,7 @@ public abstract class AccountDialog extends JDialog {
         JButton_Cancel.setText("Cancel");
         JButton_Cancel.setActionCommand("Cancel");
         getContentPane().add(JButton_Cancel);
-        JButton_Cancel.setBounds(156, 150, 84, 24);
+        JButton_Cancel.setBounds(155, 150, 84, 24);
 
         JButton_OK.addActionListener(okAction);
         JButton_Cancel.addActionListener(cancelAction);
