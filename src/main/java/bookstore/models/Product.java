@@ -1,6 +1,6 @@
 package bookstore.models;
 
-import framework.Storage.Storable;
+import framework.core.Storage.Storable;
 import lombok.Data;
 
 @Data

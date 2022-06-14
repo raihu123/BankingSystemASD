@@ -4,11 +4,11 @@ import banking.controllers.IAccountController;
 import ccard.enums.CreditCardType;
 import ccard.factory.CreditCardFactory;
 import ccard.services.CreditCardAccountServiceImpl;
-import common.enums.AccountType;
-import common.models.Account;
-import common.models.AccountEntry;
-import common.models.Customer;
-import common.models.Person;
+import framework.fintech.enums.AccountType;
+import framework.fintech.models.Account;
+import framework.fintech.models.AccountEntry;
+import framework.fintech.models.Customer;
+import framework.fintech.models.Person;
 
 import java.time.LocalDate;
 import java.util.Collection;

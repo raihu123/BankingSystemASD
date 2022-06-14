@@ -5,8 +5,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class JDialog_AddCompAcc extends AccountDialog {
-    private BankFrm bankFrame;
-    private JTextField JTextField_NoOfEmp = new JTextField();
+    private final BankFrm bankFrame;
+    private final JTextField JTextField_NoOfEmp = new JTextField();
 
     public JDialog_AddCompAcc(BankFrm parent) {
         super(parent, "Add Company Account");

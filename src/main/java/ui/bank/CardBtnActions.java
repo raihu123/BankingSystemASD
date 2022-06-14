@@ -2,7 +2,7 @@ package ui.bank;
 
 import banking.controllers.IAccountController;
 import ccard.enums.CreditCardType;
-import common.models.Account;
+import framework.fintech.models.Account;
 import ui.ccard.CardFrm;
 import ui.ccard.JDialogGenBill;
 import ui.ccard.JDialog_AddCCAccount;

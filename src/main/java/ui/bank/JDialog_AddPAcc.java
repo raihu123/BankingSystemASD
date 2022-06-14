@@ -1,11 +1,12 @@
 package ui.bank;
 
 import javax.swing.*;
-import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class JDialog_AddPAcc extends AccountDialog {
     private JTextField JTextField_BD;
-    private BankFrm bankFrame;
+    private final BankFrm bankFrame;
     public JDialog_AddPAcc(BankFrm parent) {
         super(parent, "Add Personal Account");
         bankFrame = parent;

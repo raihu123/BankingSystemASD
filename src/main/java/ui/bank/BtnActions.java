@@ -1,8 +1,8 @@
 package ui.bank;
 
 import banking.controllers.IAccountController;
-import common.enums.AccountType;
-import common.models.Account;
+import framework.fintech.enums.AccountType;
+import framework.fintech.models.Account;
 import lombok.Getter;
 import lombok.Setter;
 import ui.common.JDialog_Deposit;

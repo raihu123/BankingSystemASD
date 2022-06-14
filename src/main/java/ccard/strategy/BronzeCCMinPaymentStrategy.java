@@ -1,6 +1,6 @@
 package ccard.strategy;
 
-import common.strategy.InterestStrategy;
+import framework.fintech.strategy.InterestStrategy;
 
 public class BronzeCCMinPaymentStrategy implements InterestStrategy {
     @Override

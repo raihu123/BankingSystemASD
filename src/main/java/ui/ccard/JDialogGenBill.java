@@ -3,7 +3,7 @@ package ui.ccard;
 		A basic implementation of the JDialog class.
 */
 
-import common.models.AccountEntry;
+import framework.fintech.models.AccountEntry;
 import ui.bank.AccountDialog;
 
 import javax.swing.*;
@@ -13,8 +13,8 @@ public class JDialogGenBill extends AccountDialog {
 	JScrollPane JScrollPane1 = new javax.swing.JScrollPane();
     String billString;
 	Collection<AccountEntry> accountEntries;
-	private JTextField JTextField1 = new JTextField();
-	private JButton JButton_OK = new JButton();
+	private final JTextField JTextField1 = new JTextField();
+	private final JButton JButton_OK = new JButton();
 
 	public JDialogGenBill(CardFrm parent, Collection<AccountEntry> accountEntries) {
 		super(parent, "Report");

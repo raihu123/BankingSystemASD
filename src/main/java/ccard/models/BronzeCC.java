@@ -1,7 +1,7 @@
 package ccard.models;
 
 import ccard.strategy.BronzeCCInterestStrategy;
-import common.models.Customer;
+import framework.fintech.models.Customer;
 
 public class BronzeCC extends CreditCard {
     public BronzeCC(String id, Customer customer) {

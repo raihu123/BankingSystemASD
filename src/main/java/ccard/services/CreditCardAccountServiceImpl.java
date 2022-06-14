@@ -3,16 +3,16 @@ package ccard.services;
 
 import ccard.models.CreditCard;
 import ccard.strategy.GoldCCInterestStrategy;
-import common.models.Account;
-import common.models.AccountEntry;
-import common.models.Customer;
-import common.observers.AccountEntryObserver;
-import common.observers.AccountUpdateObserver;
-import common.repositories.AccountEntryRepository;
-import common.repositories.AccountRepository;
-import common.repositories.CustomerRepository;
-import common.services.AccountService;
-import framework.RepositoryEvents;
+import framework.core.RepositoryEvents;
+import framework.fintech.models.Account;
+import framework.fintech.models.AccountEntry;
+import framework.fintech.models.Customer;
+import framework.fintech.observers.AccountEntryObserver;
+import framework.fintech.observers.AccountUpdateObserver;
+import framework.fintech.repositories.AccountEntryRepository;
+import framework.fintech.repositories.AccountRepository;
+import framework.fintech.repositories.CustomerRepository;
+import framework.fintech.services.AccountService;
 
 import java.time.LocalDate;
 import java.time.Period;

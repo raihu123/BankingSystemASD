@@ -2,10 +2,10 @@ package banking;
 
 
 import banking.controllers.AccountController;
-import common.enums.AccountType;
-import common.models.Account;
-import common.models.AccountEntry;
-import common.models.Customer;
+import framework.fintech.enums.AccountType;
+import framework.fintech.models.Account;
+import framework.fintech.models.AccountEntry;
+import framework.fintech.models.Customer;
 
 import java.time.LocalDate;
 
