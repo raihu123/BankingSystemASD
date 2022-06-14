@@ -1,6 +1,6 @@
 package ui.bank;
 
-import banking.controllers.IAccountController;
+import framework.fintech.controller.IAccountController;
 import framework.fintech.models.Account;
 
 import java.awt.event.ActionListener;

@@ -1,6 +1,6 @@
 package ui.bank;
 
-import banking.controllers.IAccountController;
+import framework.fintech.controller.IAccountController;
 import ccard.enums.CreditCardType;
 import framework.fintech.models.Account;
 import ui.ccard.CardFrm;

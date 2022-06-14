@@ -1,6 +1,6 @@
 package ccard.controllers;
 
-import banking.controllers.IAccountController;
+import framework.fintech.controller.IAccountController;
 import ccard.enums.CreditCardType;
 import ccard.factory.ConcreteCreditCardFactory;
 import ccard.factory.CreditCardFactory;
