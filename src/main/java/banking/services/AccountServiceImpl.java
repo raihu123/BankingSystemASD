@@ -57,11 +57,12 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public void deposit(String accountNumber, double amount) {
 		Account account = accountRepository.loadOne(accountNumber);
+
+
 		if(account == null){
 			throw new IllegalArgumentException();
 		}
-
-		AccountEntry entry = new AccountEntry(amount, "Deposit or Interst", accountNumber, "");
+		AccountEntry entry = new AccountEntry(amount, "Deposit or Interest", accountNumber, "");
 		entry.setAccount(account);
 		accountEntryRepository.save(entry);
 		account.addEntry(entry);
@@ -71,10 +72,10 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public void withdraw(String accountNumber, double amount) {
 		Account account = accountRepository.loadOne(accountNumber);
+
 		if(account == null){
 			throw new IllegalArgumentException();
 		}
-
 		AccountEntry entry = new AccountEntry(-amount, "Withdraw", accountNumber, "");
 		entry.setAccount(account);
 		accountEntryRepository.save(entry);
