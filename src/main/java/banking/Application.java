@@ -14,8 +14,8 @@ public class Application {
 	public static void main(String[] args) {
 		AccountController accountController = new AccountController();
 		
-		accountController.createPersonalAccount("1111111","Personal Checking","1 Pioneer Ranch","Las Vegas","Nevada","98113","customer1@gmail.com", LocalDate.of(1985, 10, 5), AccountType.CHECKING);
-		accountController.createPersonalAccount("2222223","Personal Savings","2 Burlington","Fairfield","Iowa","52556","customer2@gmail.com", LocalDate.of(1983, 12, 1), AccountType.SAVING);
+		accountController.createPersonalAccount("1111111","Personal Checking","1 Pioneer Ranch","Las Vegas","Nevada","98113","lumukd@gmail.com", LocalDate.of(1985, 10, 5), AccountType.CHECKING);
+		accountController.createPersonalAccount("2222223","Personal Savings","2 Burlington","Fairfield","Iowa","52556","lumukd@gmail.com", LocalDate.of(1983, 12, 1), AccountType.SAVING);
 		accountController.createCompanyAccount("3333333","Company Checking","customer3@gmail.com","3 N 4th St","Ottumwa","Iowa","52559", 30, AccountType.SAVING);
 		accountController.createCompanyAccount("4444444","Company Saving","customer4@gmail.com","4 Martin Ave","Des Moines","Iowa","53777", 20, AccountType.CHECKING);
 
