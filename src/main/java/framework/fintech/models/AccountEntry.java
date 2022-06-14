@@ -3,12 +3,14 @@ package framework.fintech.models;
 import framework.core.Storage.Storable;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
 @Setter
 @Getter
+@ToString
 public  class AccountEntry implements Storable<String> {
 
     private String id;
