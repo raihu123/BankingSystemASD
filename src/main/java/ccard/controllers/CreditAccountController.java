@@ -2,6 +2,7 @@ package ccard.controllers;
 
 import banking.controllers.IAccountController;
 import ccard.enums.CreditCardType;
+import ccard.factory.ConcreteCreditCardFactory;
 import ccard.factory.CreditCardFactory;
 import ccard.services.CreditCardAccountServiceImpl;
 import framework.fintech.enums.AccountType;
@@ -15,9 +16,10 @@ import java.util.Collection;
 
 public class CreditAccountController implements IAccountController {
     CreditCardAccountServiceImpl accountService;
-
+    CreditCardFactory creditCardFactory;
     public CreditAccountController() {
         accountService = new CreditCardAccountServiceImpl();
+        creditCardFactory = new ConcreteCreditCardFactory();
     }
 
     public Account createAccount(String ccn, String name, String street, String city, String state, String zip, String email, LocalDate dob, AccountType accountType, CreditCardType cardType) {
@@ -25,7 +27,7 @@ public class CreditAccountController implements IAccountController {
         Customer person = new Person(ccn, name, street, city, state, zip, email, dob);
 //        uuid = UUID.randomUUID();
 
-        Account account = CreditCardFactory.createCredCard(cardType, ccn, person);
+        Account account = creditCardFactory.createCredCard(cardType, ccn, person);
 
         return accountService.createAccount(account, person);
     }
