@@ -1,16 +1,11 @@
 package ui.bank;
 
-import common.models.Account;
-import lombok.Getter;
-import lombok.Setter;
+import framework.fintech.models.Account;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 
 
 public abstract class MainFrame extends JFrame {
@@ -65,7 +60,7 @@ public abstract class MainFrame extends JFrame {
 	}
 
 
-	static public void main(String args[])
+	static public void main(String[] args)
 	{
 		try {
 		    // Add the following code if you want the Look and Feel

@@ -1,6 +1,6 @@
 package banking.strategy;
 
-import common.strategy.InterestStrategy;
+import framework.fintech.strategy.InterestStrategy;
 
 public class BasicAccountInterestStrategy implements InterestStrategy {
     @Override

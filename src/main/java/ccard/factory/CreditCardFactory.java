@@ -5,7 +5,7 @@ import ccard.models.BronzeCC;
 import ccard.models.CreditCard;
 import ccard.models.GoldCC;
 import ccard.models.SilverCC;
-import common.models.Customer;
+import framework.fintech.models.Customer;
 
 public class CreditCardFactory {
 	

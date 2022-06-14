@@ -1,18 +1,20 @@
 package banking.controllers;
 
 import banking.services.AccountServiceImpl;
-import common.enums.AccountType;
-import common.models.Account;
-import common.models.Company;
-import common.models.Customer;
-import common.models.Person;
-import common.services.AccountService;
-
+import framework.fintech.enums.AccountType;
+import framework.fintech.models.Account;
+import framework.fintech.models.Company;
+import framework.fintech.models.Customer;
+import framework.fintech.models.Person;
+import framework.fintech.services.AccountService;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 import java.util.Collection;
 import java.util.UUID;
-
+@Getter
+@Setter
 public class AccountController implements IAccountController {
     AccountService accountService;
 
@@ -55,13 +57,4 @@ public class AccountController implements IAccountController {
         accountService.setInterest();
     }
 
-	public AccountService getAccountService() {
-		return accountService;
-	}
-
-	public void setAccountService(AccountService accountService) {
-		this.accountService = accountService;
-	}
-    
-    
 }

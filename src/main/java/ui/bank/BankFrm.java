@@ -1,8 +1,7 @@
 package ui.bank;
 
 import banking.controllers.AccountController;
-import common.models.Account;
-
+import framework.fintech.models.Account;
 
 import javax.swing.*;
 import java.awt.event.WindowAdapter;
@@ -22,7 +21,7 @@ public class BankFrm extends MainFrame {
         overview("Bank Application.", Arrays.asList("AccountNr", "Name", "City", "P/C", "Ch/S", "Amount"), getButtons());
     }
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         try {
             try {
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());

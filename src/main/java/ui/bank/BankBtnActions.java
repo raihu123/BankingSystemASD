@@ -1,8 +1,7 @@
 package ui.bank;
 
-import banking.controllers.AccountController;
 import banking.controllers.IAccountController;
-import common.models.Account;
+import framework.fintech.models.Account;
 
 import java.awt.event.ActionListener;
 import java.time.LocalDate;

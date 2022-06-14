@@ -1,13 +1,11 @@
 package ccard.factory;
 
 import ccard.enums.CreditCardType;
-
 import ccard.strategy.BronzeCCMinPaymentStrategy;
 import ccard.strategy.GoldCCMinPaymentStrategy;
 import ccard.strategy.NoCCMinPaymentStrategy;
 import ccard.strategy.SilverCCMinPaymentStrategy;
-
-import common.strategy.InterestStrategy;
+import framework.fintech.strategy.InterestStrategy;
 
 public class MinPaymentStrategyFactory {
     private static GoldCCMinPaymentStrategy goldCCMinPaymentStrategy;

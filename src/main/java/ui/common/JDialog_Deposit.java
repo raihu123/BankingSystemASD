@@ -2,12 +2,10 @@ package ui.common;
 
 import ui.bank.MainFrame;
 
-import javax.swing.*;
-
 public class JDialog_Deposit extends javax.swing.JDialog
 {
     private MainFrame parentframe;
-    private String accnr;
+    private final String accnr;
     
 	public JDialog_Deposit(MainFrame parent, String aaccnr)
 	{

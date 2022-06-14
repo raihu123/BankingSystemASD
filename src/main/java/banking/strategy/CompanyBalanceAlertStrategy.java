@@ -1,9 +1,9 @@
 package banking.strategy;
 
-import common.models.Account;
-import common.strategy.BalanceAlertStrategy;
-import framework.Components.Notification.Email.EmailMessage;
-import framework.Components.Notification.Email.EmailNotification;
+import framework.core.notification.Email.EmailMessage;
+import framework.core.notification.Email.EmailNotification;
+import framework.fintech.models.Account;
+import framework.fintech.strategy.BalanceAlertStrategy;
 
 public class CompanyBalanceAlertStrategy implements BalanceAlertStrategy {
 

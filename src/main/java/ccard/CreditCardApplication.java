@@ -3,9 +3,9 @@ package ccard;
 
 import ccard.controllers.CreditAccountController;
 import ccard.enums.CreditCardType;
-import common.enums.AccountType;
-import common.models.Account;
-import common.models.AccountEntry;
+import framework.fintech.enums.AccountType;
+import framework.fintech.models.Account;
+import framework.fintech.models.AccountEntry;
 
 import java.time.LocalDate;
 import java.util.Collection;
