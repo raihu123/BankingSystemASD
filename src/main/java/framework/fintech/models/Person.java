@@ -14,7 +14,9 @@ public class Person extends Customer {
     private final LocalDate dob;
 
     public Person(String id,String name, String street, String city, String state, String zip, String email,LocalDate dob){
-        super(id,name,email,street,city,state,zip, CustomerType.PERSON,new PersonBalanceAlertStrategy(),new PersonTransactionStrategy());
+        super(id,name,email,street,city,state,zip, CustomerType.PERSON);
+        super.getAlerts().add(new PersonBalanceAlertStrategy());
+        super.getAlerts().add(new PersonTransactionStrategy());
         this.dob=dob;
     }
 }
