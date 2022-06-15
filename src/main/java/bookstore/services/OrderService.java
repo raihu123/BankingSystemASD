@@ -7,11 +7,12 @@ import bookstore.models.Product;
 import bookstore.observers.OrderObserver;
 import bookstore.repositories.OrderRepository;
 import framework.core.RepositoryEvents;
+import framework.core.Service;
 
 import java.util.List;
 import java.util.UUID;
 
-public class OrderService {
+public class OrderService implements Service {
     OrderRepository orderRepository;
 
     public OrderService(){
