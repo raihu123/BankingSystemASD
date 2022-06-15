@@ -6,6 +6,6 @@ import framework.fintech.models.Customer;
 public class SilverCC extends CreditCard {
     public SilverCC(String id, Customer customer) {
         super(id, customer);
-        this.setInterestStrategy(new SilverCCInterestStrategy());
+        interestStrategy = new SilverCCInterestStrategy();
     }
 }

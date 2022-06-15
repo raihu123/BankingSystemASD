@@ -2,12 +2,12 @@ package banking.services;
 
 
 import banking.strategy.BasicAccountInterestStrategy;
-import framework.core.RepositoryEvents;
 import framework.fintech.models.Account;
 import framework.fintech.models.AccountEntry;
 import framework.fintech.models.Customer;
 import framework.fintech.observers.AccountEntryObserver;
 import framework.fintech.observers.AccountUpdateObserver;
+import framework.fintech.observers.CustomerCreateObserver;
 import framework.fintech.repositories.AccountEntryRepository;
 import framework.fintech.repositories.AccountRepository;
 import framework.fintech.repositories.CustomerRepository;
@@ -34,10 +34,11 @@ public class AccountServiceImpl implements AccountService {
 
 	public AccountServiceImpl(){
 		accountRepository = new AccountRepository();
-		accountRepository.addObserver(new AccountUpdateObserver(),RepositoryEvents.POST_UPDATE);
+		accountRepository.addObserver(new AccountUpdateObserver());
 		customerRepository = new CustomerRepository();
+		customerRepository.addObserver(new CustomerCreateObserver());
 		accountEntryRepository = new AccountEntryRepository();
-		accountEntryRepository.addObserver(new AccountEntryObserver(),RepositoryEvents.POST_SAVE);
+		accountEntryRepository.addObserver(new AccountEntryObserver());
 	}
 
 	@Override
@@ -67,6 +68,7 @@ public class AccountServiceImpl implements AccountService {
 		accountEntryRepository.save(entry);
 		account.addEntry(entry);
 		accountRepository.update(account);
+
 	}
 
 	@Override

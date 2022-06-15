@@ -28,11 +28,9 @@ public abstract  class Customer implements Storable<String> {
     private String zip;
     private CustomerType customerType;
     private final List<AlertStrategy> alerts = new ArrayList<>();
-
-
 	@Override
     public String getStorageKey() {
         return this.id;
     }
-
+    //
 }

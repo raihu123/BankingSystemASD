@@ -1,11 +1,12 @@
 package ccard.controllers;
 
-import banking.controllers.IAccountController;
+import ccard.strategy.CardTransactionStrategy;
+import framework.fintech.controllers.IAccountController;
 import ccard.enums.CreditCardType;
 import ccard.factory.ConcreteCreditCardFactory;
-import ccard.factory.CreditCardFactory;
 import ccard.services.CreditCardAccountServiceImpl;
 import framework.fintech.enums.AccountType;
+import framework.fintech.factory.AccountFactory;
 import framework.fintech.models.Account;
 import framework.fintech.models.AccountEntry;
 import framework.fintech.models.Customer;
@@ -16,19 +17,16 @@ import java.util.Collection;
 
 public class CreditAccountController implements IAccountController {
     CreditCardAccountServiceImpl accountService;
-    CreditCardFactory creditCardFactory;
+    AccountFactory creditCardFactory;
     public CreditAccountController() {
         accountService = new CreditCardAccountServiceImpl();
         creditCardFactory = new ConcreteCreditCardFactory();
     }
 
     public Account createAccount(String ccn, String name, String street, String city, String state, String zip, String email, LocalDate dob, AccountType accountType, CreditCardType cardType) {
-//        UUID uuid = UUID.randomUUID();
         Customer person = new Person(ccn, name, street, city, state, zip, email, dob);
-//        uuid = UUID.randomUUID();
-
-        Account account = creditCardFactory.createCredCard(cardType, ccn, person);
-
+        Account account = creditCardFactory.createAccount(cardType, ccn, person);
+        person.getAlerts().add(new CardTransactionStrategy());
         return accountService.createAccount(account, person);
     }
 
@@ -40,6 +38,10 @@ public class CreditAccountController implements IAccountController {
 
     public void withdraw(String accountNumber, double amount) {
         accountService.withdraw(accountNumber, amount);
+    }
+
+    public void addInterest(){
+        accountService.setInterest();
     }
 
     public Collection<Account> getAllAccounts() {

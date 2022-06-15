@@ -4,51 +4,44 @@ import framework.core.Observer.Observable;
 import framework.core.Observer.Observer;
 import framework.core.Storage.*;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-public abstract class EntityRepository<O extends Storable<K>,K> implements Observable<RepositoryEvents,O> {
+public abstract class EntityRepository<O extends Storable<K>,K> implements Observable<O> {
     DAO<O,K> dao;
-    Map<EventType, Set<Observer>> observersList = new HashMap<>();
 
-    public Map<EventType, Set<Observer>> getObserversList(){
-        return observersList;
-    }
-
+    private Set<Observer> observersList = new HashSet<>();
     public EntityRepository(){
         this.dao = getDao();
     }
 
+    //* Factory method pattern
     public abstract DAO<O,K> getDao();
 
-    @Override
-    public void notify(RepositoryEvents event,O obj ){
-        if (!observersList.containsKey(event)) {
-          return;
-        }
-
-        for(Observer observer : observersList.get(event)){
+    // --start-- Observable interface method implementations
+    public Set<Observer> getObserversList(){
+        return observersList;
+    }
+    //* Observer pattern
+    public void notify(O obj ){
+        for(Observer observer : observersList){
+            // System.out.println(observer);
             observer.update(obj);
         }
     }
-
+    // --end--
     public final void save(O obj){
-        notify(RepositoryEvents.PRE_SAVE,obj);
         this.dao.create(obj);
-        notify(RepositoryEvents.POST_SAVE,obj);
+        notify(obj);
     }
 
     public final void update(O obj){
-        notify(RepositoryEvents.PRE_UPDATE,obj);
         this.dao.update(obj);
-        notify(RepositoryEvents.POST_UPDATE,obj);
+        //notify(obj);
     }
 
     public final O loadOne(K k){
-        O obj = this.dao.loadOne( k);
-        notify(RepositoryEvents.POST_LOAD,obj);
+        O obj = this.dao.loadOne(k);
+        //? notify(obj);
         return obj;
     }
 

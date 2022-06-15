@@ -16,7 +16,7 @@ public class OrderService {
 
     public OrderService(){
         orderRepository = new OrderRepository();
-        orderRepository.addObserver(new OrderObserver(), RepositoryEvents.PRE_SAVE);
+        orderRepository.addObserver(new OrderObserver());
     }
 
     public Order createOrder(Customer customer, List<Product> productList, PaymentMethod paymentMethod){

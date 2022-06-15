@@ -28,10 +28,10 @@ public class CreditCardAccountServiceImpl implements AccountService {
 
 	public CreditCardAccountServiceImpl(){
 		accountRepository = new AccountRepository();
-		accountRepository.addObserver(new AccountUpdateObserver(),RepositoryEvents.POST_UPDATE);
+		accountRepository.addObserver(new AccountUpdateObserver());
 		customerRepository = new CustomerRepository();
 		accountEntryRepository = new AccountEntryRepository();
-		accountEntryRepository.addObserver(new AccountEntryObserver(),RepositoryEvents.POST_SAVE);
+		accountEntryRepository.addObserver(new AccountEntryObserver());
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class CreditCardAccountServiceImpl implements AccountService {
 			customer = dbCustomer;
 		}
 		account.setCustomer(customer);
-		account.setInterestStrategy(new GoldCCInterestStrategy());
+//		account.setInterestStrategy(new GoldCCInterestStrategy());
 		accountRepository.save(account);
 		return account;
 	}
@@ -89,7 +89,7 @@ public class CreditCardAccountServiceImpl implements AccountService {
 	@Override
 	public void setInterest() {
 		for(Account account: this.accountRepository.getAll()){
-			account.setInterestStrategy(account.getInterestStrategy());
+			this.deposit(account.getId(), account.calculateInterest());
 		}
 	}
 
@@ -102,7 +102,7 @@ public class CreditCardAccountServiceImpl implements AccountService {
 		if(balance < 0){
 			return 0;
 		}
-		return account.getMinPaymentStrategy().calculateInterest(balance);
+		return account.getInterestStrategy().calculateInterest(balance);
 	}
 
 	

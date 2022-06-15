@@ -5,23 +5,26 @@ import ccard.models.BronzeCC;
 import ccard.models.CreditCard;
 import ccard.models.GoldCC;
 import ccard.models.SilverCC;
+import framework.fintech.factory.AccountFactory;
+import framework.fintech.models.Account;
 import framework.fintech.models.Customer;
 
-public class ConcreteCreditCardFactory extends CreditCardFactory {
-	
-    public CreditCard createCredCard(CreditCardType cardType, String id, Customer customer) {
+public class ConcreteCreditCardFactory implements AccountFactory <CreditCardType> {
+
+    @Override
+    public Account createAccount(CreditCardType cardType, String accountNumber, Customer customer) {
         CreditCard creditCard = null;
 
         if (cardType == CreditCardType.BRONZE) {
-            creditCard = new BronzeCC(id, customer);
+            creditCard = new BronzeCC(accountNumber, customer);
         } else if (cardType == CreditCardType.GOLD) {
-            creditCard = new GoldCC(id, customer);
+            creditCard = new GoldCC(accountNumber, customer);
         } else if (cardType == CreditCardType.SILVER) {
-            creditCard = new SilverCC(id, customer);
+            creditCard = new SilverCC(accountNumber, customer);
         }
-
-        creditCard.setMinPaymentStrategy(MinPaymentStrategyFactory.getMinPaymentStrategy(cardType));
+        // ?? REVIEW
+        ///creditCard.setInterestStrategy(MinPaymentStrategyFactory.getMinPaymentStrategy(cardType));
+        //creditCard.setMinPaymentStrategy(MinPaymentStrategyFactory.getMinPaymentStrategy(cardType));
         return creditCard;
-
     }
 }

@@ -10,25 +10,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public  class Account implements Storable<String> {
-	
+public abstract class Account implements Storable<String> {
+
     private String id;
-    private InterestStrategy interestStrategy;
+    protected InterestStrategy interestStrategy;
     private Customer customer;
-    private AccountType accountType;
     private Double balance = 0.0;
     private List<AccountEntry> entryList;
 
-    public Account(String id, Customer customer, AccountType accountType) {
+    protected AccountType accountType = null;
+
+    public Account(String id, Customer customer) {
         this.id = id;
         this.customer = customer;
-        this.accountType = accountType;
-        entryList = new ArrayList<AccountEntry>();
+        this.entryList = new ArrayList<AccountEntry>();
     }
 
-    @Override
+
     public String getStorageKey() {
-        return this.id;
+        return id;
     }
 
     public void addEntry(AccountEntry accountEntry){
@@ -43,5 +43,11 @@ public  class Account implements Storable<String> {
         }
         return balance;
     }
+
+    //* Strategy pattern here
+    public double calculateInterest() {
+        return interestStrategy.calculateInterest(getBalance());
+    }
+
     
 }

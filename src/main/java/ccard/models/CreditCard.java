@@ -11,15 +11,16 @@ public abstract class CreditCard extends Account {
     private InterestStrategy minPaymentStrategy;
 
     public CreditCard(String id, Customer customer) {
-        super(id, customer, AccountType.CREDIT);
-        this.minPaymentStrategy = new NoCCMinPaymentStrategy();
+        super(id, customer);
+        interestStrategy = new NoCCMinPaymentStrategy();
+        accountType = AccountType.CREDIT;
     }
-
-    public InterestStrategy getMinPaymentStrategy() {
-        return minPaymentStrategy;
-    }
-
-    public void setMinPaymentStrategy(InterestStrategy minPaymentStrategy) {
-        this.minPaymentStrategy = minPaymentStrategy;
-    }
+//
+//    public InterestStrategy getMinPaymentStrategy() {
+//        return minPaymentStrategy;
+//    }
+//
+//    public void setMinPaymentStrategy(InterestStrategy minPaymentStrategy) {
+//        this.minPaymentStrategy = minPaymentStrategy;
+//    }
 }

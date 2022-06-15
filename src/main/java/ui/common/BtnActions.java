@@ -1,13 +1,10 @@
 package ui.common;
 
-import banking.controllers.IAccountController;
+import framework.fintech.controllers.IAccountController;
 import framework.fintech.enums.AccountType;
 import framework.fintech.models.Account;
 import lombok.Getter;
 import lombok.Setter;
-import ui.common.JDialog_Deposit;
-import ui.common.JDialog_Withdraw;
-import ui.common.MainFrame;
 
 import javax.swing.*;
 import java.awt.event.ActionListener;
