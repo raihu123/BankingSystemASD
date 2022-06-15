@@ -1,7 +1,8 @@
-package ui.bank;
+package ui.common;
 
 import lombok.Getter;
 import lombok.Setter;
+import ui.common.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,25 +12,25 @@ import java.awt.event.ActionListener;
 @Getter
 public abstract class AccountDialog extends JDialog {
     private MainFrame parentFrame;
-    JRadioButton JRadioButton_Chk = new JRadioButton();
-    JRadioButton JRadioButton_Sav = new JRadioButton();
-    JLabel JLabel1 = new JLabel();
-    JLabel JLabel2 = new JLabel();
-    JLabel JLabel3 = new JLabel();
-    JLabel JLabel4 = new JLabel();
-    JLabel JLabel5 = new JLabel();
-    JLabel JLabel6 = new JLabel();
-    JLabel JLabel7 = new JLabel();
-    JTextField JTextField_NAME = new JTextField();
-    JTextField JTextField_CT = new JTextField();
-    JTextField JTextField_ST = new JTextField();
-    JTextField JTextField_STR = new JTextField();
-    JTextField JTextField_ZIP = new JTextField();
-    JTextField JTextField_EM = new JTextField();
-    JButton JButton_OK = new JButton();
-    JButton JButton_Cancel = new JButton();
-    JLabel JLabel8 = new JLabel();
-    JTextField JTextField_ACNR = new JTextField();
+    public JRadioButton JRadioButton_Chk = new JRadioButton();
+    public JRadioButton JRadioButton_Sav = new JRadioButton();
+    public JLabel JLabel1 = new JLabel();
+    public JLabel JLabel2 = new JLabel();
+    public JLabel JLabel3 = new JLabel();
+    public JLabel JLabel4 = new JLabel();
+    public JLabel JLabel5 = new JLabel();
+    public JLabel JLabel6 = new JLabel();
+    public JLabel JLabel7 = new JLabel();
+    public JTextField JTextField_NAME = new JTextField();
+    public JTextField JTextField_CT = new JTextField();
+    public JTextField JTextField_ST = new JTextField();
+    public JTextField JTextField_STR = new JTextField();
+    public JTextField JTextField_ZIP = new JTextField();
+    public JTextField JTextField_EM = new JTextField();
+    public JButton JButton_OK = new JButton();
+    public JButton JButton_Cancel = new JButton();
+    public JLabel JLabel8 = new JLabel();
+    public JTextField JTextField_ACNR = new JTextField();
 
     public AccountDialog(MainFrame parent, String title) {
         super(parent);

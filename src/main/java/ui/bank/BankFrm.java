@@ -2,6 +2,8 @@ package ui.bank;
 
 import banking.controllers.AccountController;
 import framework.fintech.models.Account;
+import ui.common.AccountButton;
+import ui.common.MainFrame;
 
 import javax.swing.*;
 import java.awt.event.WindowAdapter;

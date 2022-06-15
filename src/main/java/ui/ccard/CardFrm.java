@@ -4,9 +4,8 @@ import ccard.controllers.CreditAccountController;
 import framework.fintech.models.Account;
 import lombok.Getter;
 import lombok.Setter;
-import ui.bank.AccountButton;
-import ui.bank.CardBtnActions;
-import ui.bank.MainFrame;
+import ui.common.AccountButton;
+import ui.common.MainFrame;
 
 import javax.swing.*;
 import java.util.Arrays;

@@ -4,7 +4,7 @@ package ui.ccard;
 */
 
 import framework.fintech.models.AccountEntry;
-import ui.bank.AccountDialog;
+import ui.common.AccountDialog;
 
 import javax.swing.*;
 import java.util.Collection;

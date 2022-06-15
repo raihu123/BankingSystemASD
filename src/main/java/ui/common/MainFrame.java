@@ -1,6 +1,7 @@
-package ui.bank;
+package ui.common;
 
 import framework.fintech.models.Account;
+import ui.bank.BankFrm;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

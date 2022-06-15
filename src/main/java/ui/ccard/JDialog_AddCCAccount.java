@@ -1,6 +1,6 @@
 package ui.ccard;
 
-import ui.bank.AccountDialog;
+import ui.common.AccountDialog;
 
 import javax.swing.*;
 import java.awt.event.MouseAdapter;

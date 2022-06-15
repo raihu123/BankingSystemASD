@@ -1,5 +1,7 @@
 package ui.bank;
 
+import ui.common.AccountDialog;
+
 import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;

@@ -1,7 +1,5 @@
 package ui.common;
 
-import ui.bank.MainFrame;
-
 public class JDialog_Deposit extends javax.swing.JDialog
 {
     private MainFrame parentframe;

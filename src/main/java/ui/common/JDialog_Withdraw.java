@@ -1,8 +1,6 @@
 package ui.common;
 
 
-import ui.bank.MainFrame;
-
 public class JDialog_Withdraw extends javax.swing.JDialog
 {
    
