@@ -36,7 +36,7 @@ public abstract class EntityRepository<O extends Storable<K>,K> implements Obser
 
     public final void update(O obj){
         this.dao.update(obj);
-        //notify(obj);
+        notify(obj);
     }
 
     public final O loadOne(K k){

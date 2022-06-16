@@ -2,8 +2,6 @@ package ccard.services;
 
 
 import ccard.models.CreditCard;
-import ccard.strategy.GoldCCInterestStrategy;
-import framework.core.RepositoryEvents;
 import framework.fintech.models.Account;
 import framework.fintech.models.AccountEntry;
 import framework.fintech.models.Customer;
@@ -26,6 +24,8 @@ public class CreditCardAccountServiceImpl implements AccountService {
 	CustomerRepository customerRepository;
 	AccountEntryRepository accountEntryRepository;
 
+	private static CreditCardAccountServiceImpl instance;
+
 	public CreditCardAccountServiceImpl(){
 		accountRepository = new AccountRepository();
 		accountRepository.addObserver(new AccountUpdateObserver());
@@ -34,6 +34,12 @@ public class CreditCardAccountServiceImpl implements AccountService {
 		accountEntryRepository.addObserver(new AccountEntryObserver());
 	}
 
+	public static CreditCardAccountServiceImpl getInstance() {
+		if (instance == null) {
+			instance = new CreditCardAccountServiceImpl();
+		}
+		return instance;
+	}
 	@Override
 	public Account createAccount(Account account, Customer customer) {
 		Customer dbCustomer = customerRepository.loadOne(customer.getId());
