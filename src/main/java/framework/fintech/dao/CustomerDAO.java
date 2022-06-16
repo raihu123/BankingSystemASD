@@ -8,6 +8,6 @@ import framework.fintech.models.Customer;
 public class CustomerDAO extends DAO<Customer,String> {
     @Override
     public Storage<Customer, String> createStorageFactory() {
-        return new MemoryStorage<Customer,String>();
+        return StorageFactory.getMemoryStorage();
     }
 }

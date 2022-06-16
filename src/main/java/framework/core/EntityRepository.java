@@ -23,10 +23,7 @@ public abstract class EntityRepository<O extends Storable<K>,K> implements Obser
     }
     //* Observer pattern
     public void notify(O obj ){
-        for(Observer observer : observersList){
-            // System.out.println(observer);
-            observer.update(obj);
-        }
+        observersList.forEach((observer -> observer.update(obj)));
     }
     // --end--
     public final void save(O obj){

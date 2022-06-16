@@ -2,8 +2,6 @@ package ccard.services;
 
 
 import ccard.models.CreditCard;
-import ccard.strategy.GoldCCInterestStrategy;
-import framework.core.RepositoryEvents;
 import framework.fintech.models.Account;
 import framework.fintech.models.AccountEntry;
 import framework.fintech.models.Customer;

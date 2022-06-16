@@ -15,7 +15,7 @@ public class Application {
 
     public static void main(String[] args){
 
-        Product p1 = new Book(UUID.randomUUID().toString(),"Design Paterns",100);
+        Product p1 = new Book(UUID.randomUUID().toString(),"Design Patterns",100);
         Product p2 = new AudioBook(UUID.randomUUID().toString(),"Football legands",30);
         List<Product> products = new ArrayList<>();
         products.add(p1);
@@ -26,6 +26,7 @@ public class Application {
         List<Product> products2 = new ArrayList<>();
         products2.add(p3);
         products2.add(p4);
+        products.add(p4);
 
         Customer c1 = customerService.createCustomer("Sam");
         Customer c2 = customerService.createCustomer("Nap");

@@ -6,7 +6,6 @@ import bookstore.models.PaymentMethod;
 import bookstore.models.Product;
 import bookstore.observers.OrderObserver;
 import bookstore.repositories.OrderRepository;
-import framework.core.RepositoryEvents;
 import framework.core.Service;
 
 import java.util.List;

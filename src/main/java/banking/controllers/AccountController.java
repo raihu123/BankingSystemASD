@@ -21,8 +21,8 @@ import java.util.Collection;
 import java.util.UUID;
 public class AccountController implements IAccountController {
 
-    AccountService accountService;
-    AccountFactory accountFactory;
+    private AccountService accountService;
+    private AccountFactory accountFactory;
     public AccountController(){
         accountService = AccountServiceImpl.getInstance();
         accountFactory = new ConcreteAccountFactory();
@@ -78,13 +78,6 @@ public class AccountController implements IAccountController {
         accountService.setInterest();
     }
 
-    public AccountService getAccountService() {
-        return accountService;
-    }
-
-    public void setAccountService(AccountService accountService) {
-        this.accountService = accountService;
-    }
 
 
 }
