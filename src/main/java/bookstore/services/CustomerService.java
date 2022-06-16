@@ -2,10 +2,11 @@ package bookstore.services;
 
 import bookstore.models.Customer;
 import bookstore.repositories.CustomerRepository;
+import framework.core.Service;
 
 import java.util.UUID;
 
-public class CustomerService {
+public class CustomerService implements Service {
     CustomerRepository customerRepository;
 
     public CustomerService(){
