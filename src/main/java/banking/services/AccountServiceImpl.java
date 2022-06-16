@@ -50,7 +50,7 @@ public class AccountServiceImpl implements AccountService {
 			customer = dbCustomer;
 		}
 		account.setCustomer(customer);
-		account.setInterestStrategy(new BasicAccountInterestStrategy());
+		//account.setInterestStrategy(new BasicAccountInterestStrategy());
 		accountRepository.save(account);
 		return account;
 	}
@@ -98,7 +98,7 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public void setInterest() {
 		for(Account account: this.accountRepository.getAll()){
-			this.deposit(account.getId(),account.getInterestStrategy().calculateInterest(account.getBalance()));
+			this.deposit(account.getId(), account.calculateInterest());
 		}
 	}
 

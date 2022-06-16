@@ -8,7 +8,7 @@ import framework.fintech.strategy.InterestStrategy;
 
 public abstract class CreditCard extends Account {
 
-    private InterestStrategy minPaymentStrategy;
+    //private InterestStrategy minPaymentStrategy;
 
     public CreditCard(String id, Customer customer) {
         super(id, customer);
